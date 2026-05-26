@@ -51,13 +51,12 @@
 		9D47E8AB2FC612C0008EF975 /* AQRExchange */ = {
 			isa = PBXGroup;
 			children = (
+				9D47E8A82FC612C0008EF975 /* AQRExchangeApp.swift */,
+				9D47E8AF2FC612C9008EF975 /* Models */,
+				9D47E8B22FC61367008EF975 /* Services */,
 				9D47E8B42FC61374008EF975 /* Views */,
 				9D47E8B32FC6136E008EF975 /* ViewModels */,
-				9D47E8B22FC61367008EF975 /* Services */,
-				9D47E8AF2FC612C9008EF975 /* Models */,
-				9D47E8A82FC612C0008EF975 /* AQRExchangeApp.swift */,
 				9D47E8A92FC612C0008EF975 /* Assets.xcassets */,
-				9D47E8AA2FC612C0008EF975 /* ContentView.swift */,
 			);
 			path = AQRExchange;
 			sourceTree = "<group>";
@@ -87,6 +86,7 @@
 		9D47E8B42FC61374008EF975 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9D47E8AA2FC612C0008EF975 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

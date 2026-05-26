@@ -15,6 +15,7 @@
 		9D47E8B82FC61C09008EF975 /* ExchangeRateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47E8B72FC61C09008EF975 /* ExchangeRateService.swift */; };
 		9D47E8BA2FC6227A008EF975 /* CurrencyProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47E8B92FC6227A008EF975 /* CurrencyProviding.swift */; };
 		9D47E8BC2FC63E5B008EF975 /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47E8BB2FC63E5B008EF975 /* CurrencyService.swift */; };
+		9D47E8BE2FC6518E008EF975 /* ExchangeCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47E8BD2FC6518E008EF975 /* ExchangeCalculatorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		9D47E8B72FC61C09008EF975 /* ExchangeRateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateService.swift; sourceTree = "<group>"; };
 		9D47E8B92FC6227A008EF975 /* CurrencyProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyProviding.swift; sourceTree = "<group>"; };
 		9D47E8BB2FC63E5B008EF975 /* CurrencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyService.swift; sourceTree = "<group>"; };
+		9D47E8BD2FC6518E008EF975 /* ExchangeCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeCalculatorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		9D47E8B32FC6136E008EF975 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				9D47E8BD2FC6518E008EF975 /* ExchangeCalculatorViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				9D47E8BC2FC63E5B008EF975 /* CurrencyService.swift in Sources */,
 				9D47E8B82FC61C09008EF975 /* ExchangeRateService.swift in Sources */,
 				9D47E8B62FC61860008EF975 /* ExchangeRateProviding.swift in Sources */,
+				9D47E8BE2FC6518E008EF975 /* ExchangeCalculatorViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

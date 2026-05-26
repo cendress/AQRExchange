@@ -8,7 +8,7 @@
 import Foundation
 
 final class CurrencyService: CurrencyProviding {
-    private let fallbackCurrencies = ["MXN", "ARS", "BRL", "COP"]
+    private let fallbackCurrencies = ["MXN", "ARS"]
     private let currenciesURL = URL(string: "https://api.dolarapp.dev/v1/tickers-currencies")!
     
     func fetchAvailableCurrencies() async -> [String] {

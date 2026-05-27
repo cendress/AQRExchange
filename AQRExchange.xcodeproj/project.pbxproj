@@ -18,6 +18,7 @@
 		9D47E8BE2FC6518E008EF975 /* ExchangeCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47E8BD2FC6518E008EF975 /* ExchangeCalculatorViewModel.swift */; };
 		9D47E8C22FC77711008EF975 /* CurrencyInputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47E8C12FC77711008EF975 /* CurrencyInputFieldView.swift */; };
 		9D47E8C42FC78298008EF975 /* CurrencySelectionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47E8C32FC78298008EF975 /* CurrencySelectionSheet.swift */; };
+		9D47E8C62FC787F3008EF975 /* ExchangeCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47E8C52FC787F3008EF975 /* ExchangeCalculatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		9D47E8BD2FC6518E008EF975 /* ExchangeCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeCalculatorViewModel.swift; sourceTree = "<group>"; };
 		9D47E8C12FC77711008EF975 /* CurrencyInputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyInputFieldView.swift; sourceTree = "<group>"; };
 		9D47E8C32FC78298008EF975 /* CurrencySelectionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelectionSheet.swift; sourceTree = "<group>"; };
+		9D47E8C52FC787F3008EF975 /* ExchangeCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeCalculatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				9D47E8AA2FC612C0008EF975 /* ContentView.swift */,
 				9D47E8C12FC77711008EF975 /* CurrencyInputFieldView.swift */,
 				9D47E8C32FC78298008EF975 /* CurrencySelectionSheet.swift */,
+				9D47E8C52FC787F3008EF975 /* ExchangeCalculatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				9D47E8C42FC78298008EF975 /* CurrencySelectionSheet.swift in Sources */,
 				9D47E8B12FC612DA008EF975 /* ExchangeRate.swift in Sources */,
 				9D47E8AD2FC612C0008EF975 /* ContentView.swift in Sources */,
+				9D47E8C62FC787F3008EF975 /* ExchangeCalculatorView.swift in Sources */,
 				9D47E8BA2FC6227A008EF975 /* CurrencyProviding.swift in Sources */,
 				9D47E8BC2FC63E5B008EF975 /* CurrencyService.swift in Sources */,
 				9D47E8B82FC61C09008EF975 /* ExchangeRateService.swift in Sources */,

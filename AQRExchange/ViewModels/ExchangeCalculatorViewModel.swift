@@ -141,7 +141,7 @@ final class ExchangeCalculatorViewModel: ObservableObject {
     }
     
     var selectedCurrencyFlag: String {
-        flag(for: selectedCurrency)
+        flagImageName(for: selectedCurrency)
     }
 
     var usdcFlag: String {
@@ -156,22 +156,22 @@ final class ExchangeCalculatorViewModel: ObservableObject {
         return "1 USDc = \(format(rate)) \(selectedCurrency)"
     }
 
-    func flag(for currency: String) -> String {
+    func flagImageName(for currency: String) -> String {
         switch currency {
         case "USDc":
-            return "🇺🇸"
+            return "flag_us"
         case "MXN":
-            return "🇲🇽"
+            return "flag_mx"
         case "ARS":
-            return "🇦🇷"
+            return "flag_ar"
         case "BRL":
-            return "🇧🇷"
+            return "flag_br"
         case "COP":
-            return "🇨🇴"
+            return "flag_co"
         case "EURc":
-            return "🇪🇺"
+            return "flag_eu"
         default:
-            return "🌐"
+            return "flag_generic"
         }
     }
 }

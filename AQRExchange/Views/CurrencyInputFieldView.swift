@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CurrencyInputFieldView: View {
-    let flag: String
+    let flagImageName: String
     let currencyCode: String
     let amount: String
     let isSelectable: Bool
@@ -23,8 +23,7 @@ struct CurrencyInputFieldView: View {
                 }
             }) {
                 HStack(spacing: 8) {
-                    Text(flag)
-                        .font(.title3)
+                    FlagIconView(imageName: flagImageName, size: 16)
                     
                     Text(currencyCode)
                         .font(.system(size: 18, weight: .semibold))
@@ -88,7 +87,7 @@ struct CurrencyInputFieldView: View {
             .ignoresSafeArea()
         
         CurrencyInputFieldView(
-            flag: "🇺🇸",
+            flagImageName: "flag_us",
             currencyCode: "USDc",
             amount: "9999",
             isSelectable: false,
@@ -105,7 +104,7 @@ struct CurrencyInputFieldView: View {
             .ignoresSafeArea()
         
         CurrencyInputFieldView(
-            flag: "🇲🇽",
+            flagImageName: "flag_mx",
             currencyCode: "MXN",
             amount: "184065.59",
             isSelectable: true,

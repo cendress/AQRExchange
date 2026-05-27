@@ -8,6 +8,7 @@
 import Foundation
 
 final class CurrencyService: CurrencyProviding {
+//    private let fallbackCurrencies = ["ARS", "EURc","COP", "MXN", "BRL"]
     private let fallbackCurrencies = ["MXN", "ARS"]
     private let currenciesURL = URL(string: "https://api.dolarapp.dev/v1/tickers-currencies")!
     

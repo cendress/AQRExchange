@@ -10,7 +10,7 @@ import SwiftUI
 struct CurrencySelectionSheet: View {
     let currencies: [String]
     let selectedCurrency: String
-    let flagProvider: (String) -> String
+    let flagImageProvider: (String) -> String
     let onSelect: (String) -> Void
     let onDismiss: () -> Void
 
@@ -49,8 +49,7 @@ struct CurrencySelectionSheet: View {
                                     .fill(Color("MainBackground"))
                                     .frame(width: 48, height: 48)
 
-                                Text(flagProvider(currency))
-                                    .font(.title2)
+                                FlagIconView(imageName: flagImageProvider(currency), size: 28)
                             }
 
                             Text(currency)
@@ -98,7 +97,7 @@ struct CurrencySelectionSheet: View {
     CurrencySelectionSheet(
         currencies: ["ARS", "EURc", "COP", "MXN", "BRL"],
         selectedCurrency: "MXN",
-        flagProvider: { currency in
+        flagImageProvider: { currency in
             switch currency {
             case "ARS": return "🇦🇷"
             case "EURc": return "🇪🇺"

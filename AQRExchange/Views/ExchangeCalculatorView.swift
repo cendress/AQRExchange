@@ -18,7 +18,6 @@ struct ExchangeCalculatorView: View {
 
             VStack(alignment: .leading, spacing: 24) {
                 Spacer()
-                    .frame(height: 112)
 
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Exchange calculator")
@@ -43,9 +42,9 @@ struct ExchangeCalculatorView: View {
                     Text(errorMessage)
                         .font(.system(size: 14, weight: .medium))
                         .foregroundStyle(.red.opacity(0.85))
-                        .padding(.top, 16)
                 }
 
+                Spacer()
                 Spacer()
             }
             .padding(.horizontal, 16)
@@ -57,7 +56,7 @@ struct ExchangeCalculatorView: View {
             CurrencySelectionSheet(
                 currencies: viewModel.availableCurrencies,
                 selectedCurrency: viewModel.selectedCurrency,
-                flagProvider: viewModel.flag(for:),
+                flagImageProvider: viewModel.flagImageName(for:),
                 onSelect: { currency in
                     viewModel.selectCurrency(currency)
                     isCurrencySheetPresented = false
@@ -105,7 +104,7 @@ struct ExchangeCalculatorView: View {
 
     private var usdcField: some View {
         CurrencyInputFieldView(
-            flag: viewModel.usdcFlag,
+            flagImageName: viewModel.usdcFlag,
             currencyCode: "USDc",
             amount: viewModel.usdcAmount,
             isSelectable: false,
@@ -118,7 +117,7 @@ struct ExchangeCalculatorView: View {
 
     private var foreignField: some View {
         CurrencyInputFieldView(
-            flag: viewModel.selectedCurrencyFlag,
+            flagImageName: viewModel.selectedCurrencyFlag,
             currencyCode: viewModel.selectedCurrency,
             amount: viewModel.foreignAmount,
             isSelectable: true,

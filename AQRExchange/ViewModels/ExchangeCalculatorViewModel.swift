@@ -134,4 +134,39 @@ final class ExchangeCalculatorViewModel: ObservableObject {
 
         return formatter.string(from: number) ?? ""
     }
+    
+    var selectedCurrencyFlag: String {
+        flag(for: selectedCurrency)
+    }
+
+    var usdcFlag: String {
+        "🇺🇸"
+    }
+
+    var rateDisplayText: String {
+        guard let rate = selectedExchangeRate?.askDecimal else {
+            return "Loading exchange rate..."
+        }
+
+        return "1 USDc = \(format(rate)) \(selectedCurrency)"
+    }
+
+    func flag(for currency: String) -> String {
+        switch currency {
+        case "USDc":
+            return "🇺🇸"
+        case "MXN":
+            return "🇲🇽"
+        case "ARS":
+            return "🇦🇷"
+        case "BRL":
+            return "🇧🇷"
+        case "COP":
+            return "🇨🇴"
+        case "EURc":
+            return "🇪🇺"
+        default:
+            return "🌐"
+        }
+    }
 }

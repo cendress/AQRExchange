@@ -100,12 +100,12 @@ struct CurrencySelectionSheet: View {
         selectedCurrency: "MXN",
         flagImageProvider: { currency in
             switch currency {
-            case "ARS": return "🇦🇷"
-            case "EURc": return "🇪🇺"
-            case "COP": return "🇨🇴"
-            case "MXN": return "🇲🇽"
-            case "BRL": return "🇧🇷"
-            default: return "🌐"
+            case "ARS": return "flag_ar"
+            case "EURc": return "flag_eu"
+            case "COP": return "flag_co"
+            case "MXN": return "flag_mx"
+            case "BRL": return "flag_br"
+            default: return "flag_us"
             }
         },
         onSelect: { _ in },

@@ -46,6 +46,7 @@ struct ExchangeCalculatorView: View {
 
                 Spacer()
                 Spacer()
+                Spacer()
             }
             .padding(.horizontal, 16)
         }
@@ -72,7 +73,7 @@ struct ExchangeCalculatorView: View {
 
     private var currencyFieldsStack: some View {
         ZStack {
-            VStack(spacing: 20) {
+            VStack(spacing: 16) {
                 if viewModel.isUSDcOnTop {
                     usdcField
                     foreignField
@@ -82,23 +83,22 @@ struct ExchangeCalculatorView: View {
                 }
             }
 
-            Button {
+            Button(action: {
                 viewModel.swapCurrencies()
-            } label: {
+            }) {
                 ZStack {
                     Circle()
                         .fill(Color("Brand"))
-                        .frame(width: 34, height: 34)
+                        .frame(width: 26, height: 26)
 
                     Image(systemName: viewModel.isUSDcOnTop ? "arrow.down" : "arrow.up")
-                        .font(.system(size: 17, weight: .bold))
+                        .font(.system(size: 16, weight: .bold))
                         .foregroundStyle(.white)
                 }
                 .padding(6)
                 .background(Color("MainBackground"))
-                .clipShape(Circle())
+                .clipShape(.circle)
             }
-            .buttonStyle(.plain)
         }
     }
 

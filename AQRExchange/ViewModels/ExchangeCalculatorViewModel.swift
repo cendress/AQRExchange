@@ -145,7 +145,7 @@ final class ExchangeCalculatorViewModel: ObservableObject {
     }
 
     var usdcFlag: String {
-        "🇺🇸"
+        "flag_us"
     }
 
     var rateDisplayText: String {
@@ -171,7 +171,7 @@ final class ExchangeCalculatorViewModel: ObservableObject {
         case "EURc":
             return "flag_eu"
         default:
-            return "flag_generic"
+            return ""
         }
     }
 }

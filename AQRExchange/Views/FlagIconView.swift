@@ -16,7 +16,7 @@ struct FlagIconView: View {
             .resizable()
             .scaledToFill()
             .frame(width: size, height: size)
-            .clipShape(Circle())
+            .clipShape(.circle)
     }
 }
 

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9D47E8AC2FC612C0008EF975 /* AQRExchangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47E8A82FC612C0008EF975 /* AQRExchangeApp.swift */; };
-		9D47E8AD2FC612C0008EF975 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47E8AA2FC612C0008EF975 /* ContentView.swift */; };
 		9D47E8AE2FC612C0008EF975 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D47E8A92FC612C0008EF975 /* Assets.xcassets */; };
 		9D47E8B12FC612DA008EF975 /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47E8B02FC612DA008EF975 /* ExchangeRate.swift */; };
 		9D47E8B62FC61860008EF975 /* ExchangeRateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47E8B52FC61860008EF975 /* ExchangeRateProviding.swift */; };
@@ -25,7 +24,6 @@
 		9D47E89A2FC61255008EF975 /* AQRExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AQRExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D47E8A82FC612C0008EF975 /* AQRExchangeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQRExchangeApp.swift; sourceTree = "<group>"; };
 		9D47E8A92FC612C0008EF975 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9D47E8AA2FC612C0008EF975 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9D47E8B02FC612DA008EF975 /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
 		9D47E8B52FC61860008EF975 /* ExchangeRateProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateProviding.swift; sourceTree = "<group>"; };
 		9D47E8B72FC61C09008EF975 /* ExchangeRateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateService.swift; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 		9D47E8B42FC61374008EF975 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9D47E8AA2FC612C0008EF975 /* ContentView.swift */,
 				9D47E8C12FC77711008EF975 /* CurrencyInputFieldView.swift */,
 				9D47E8C32FC78298008EF975 /* CurrencySelectionSheet.swift */,
 				9D47E8C52FC787F3008EF975 /* ExchangeCalculatorView.swift */,
@@ -190,7 +187,6 @@
 				9D47E8AC2FC612C0008EF975 /* AQRExchangeApp.swift in Sources */,
 				9D47E8C42FC78298008EF975 /* CurrencySelectionSheet.swift in Sources */,
 				9D47E8B12FC612DA008EF975 /* ExchangeRate.swift in Sources */,
-				9D47E8AD2FC612C0008EF975 /* ContentView.swift in Sources */,
 				9D47E8C62FC787F3008EF975 /* ExchangeCalculatorView.swift in Sources */,
 				9D47E8BA2FC6227A008EF975 /* CurrencyProviding.swift in Sources */,
 				9D47E8BC2FC63E5B008EF975 /* CurrencyService.swift in Sources */,

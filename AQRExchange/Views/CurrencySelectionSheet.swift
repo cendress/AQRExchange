@@ -24,7 +24,7 @@ struct CurrencySelectionSheet: View {
 
             HStack {
                 Text("Choose currency")
-                    .font(.system(size: 28, weight: .bold))
+                    .font(.system(size: 24, weight: .bold))
                     .foregroundStyle(.black.opacity(0.84))
 
                 Spacer()
@@ -47,13 +47,13 @@ struct CurrencySelectionSheet: View {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 12, style: .continuous)
                                     .fill(Color("MainBackground"))
-                                    .frame(width: 48, height: 48)
+                                    .frame(width: 40, height: 40)
 
                                 FlagIconView(imageName: flagImageProvider(currency), size: 28)
                             }
 
                             Text(currency)
-                                .font(.system(size: 20, weight: .semibold))
+                                .font(.system(size: 16, weight: .semibold))
                                 .foregroundStyle(.black.opacity(0.78))
 
                             Spacer()
@@ -68,8 +68,11 @@ struct CurrencySelectionSheet: View {
             .background(Color.white)
             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
             .padding(.bottom, 16)
+            
+            Spacer()
         }
         .padding(.horizontal, 16)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("MainBackground"))
     }
 
@@ -79,16 +82,14 @@ struct CurrencySelectionSheet: View {
             ZStack {
                 Circle()
                     .fill(Color("Brand"))
-                    .frame(width: 30, height: 30)
+                    .frame(width: 24, height: 24)
 
-                Image(systemName: "checkmark")
-                    .font(.system(size: 15, weight: .bold))
-                    .foregroundStyle(.white)
+                Image("CheckmarkIcon")
             }
         } else {
             Circle()
                 .stroke(Color.gray.opacity(0.35), lineWidth: 2)
-                .frame(width: 30, height: 30)
+                .frame(width: 24, height: 24)
         }
     }
 }

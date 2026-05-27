@@ -31,11 +31,11 @@ final class ExchangeCalculatorViewModel: ObservableObject {
     }
     
     init(
-        exchangeRateProvider: ExchangeRateProviding = ExchangeRateService(),
-        currencyProvider: CurrencyProviding = CurrencyService()
+        exchangeRateProvider: ExchangeRateProviding? = nil,
+        currencyProvider: CurrencyProviding? = nil
     ) {
-        self.exchangeRateProvider = exchangeRateProvider
-        self.currencyProvider = currencyProvider
+        self.exchangeRateProvider = exchangeRateProvider ?? ExchangeRateService()
+        self.currencyProvider = currencyProvider ?? CurrencyService()
     }
     
     func loadInitialData() async {
@@ -53,8 +53,7 @@ final class ExchangeCalculatorViewModel: ObservableObject {
                 }
                 
                 return (currencyCode, exchangeRate)
-            }
-            )
+            })
         } catch {
             errorMessage = error.localizedDescription
         }

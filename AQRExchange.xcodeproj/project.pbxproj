@@ -17,6 +17,7 @@
 		9D47E8BC2FC63E5B008EF975 /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47E8BB2FC63E5B008EF975 /* CurrencyService.swift */; };
 		9D47E8BE2FC6518E008EF975 /* ExchangeCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47E8BD2FC6518E008EF975 /* ExchangeCalculatorViewModel.swift */; };
 		9D47E8C22FC77711008EF975 /* CurrencyInputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47E8C12FC77711008EF975 /* CurrencyInputFieldView.swift */; };
+		9D47E8C42FC78298008EF975 /* CurrencySelectionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47E8C32FC78298008EF975 /* CurrencySelectionSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		9D47E8BB2FC63E5B008EF975 /* CurrencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyService.swift; sourceTree = "<group>"; };
 		9D47E8BD2FC6518E008EF975 /* ExchangeCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeCalculatorViewModel.swift; sourceTree = "<group>"; };
 		9D47E8C12FC77711008EF975 /* CurrencyInputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyInputFieldView.swift; sourceTree = "<group>"; };
+		9D47E8C32FC78298008EF975 /* CurrencySelectionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelectionSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				9D47E8AA2FC612C0008EF975 /* ContentView.swift */,
 				9D47E8C12FC77711008EF975 /* CurrencyInputFieldView.swift */,
+				9D47E8C32FC78298008EF975 /* CurrencySelectionSheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D47E8AC2FC612C0008EF975 /* AQRExchangeApp.swift in Sources */,
+				9D47E8C42FC78298008EF975 /* CurrencySelectionSheet.swift in Sources */,
 				9D47E8B12FC612DA008EF975 /* ExchangeRate.swift in Sources */,
 				9D47E8AD2FC612C0008EF975 /* ContentView.swift in Sources */,
 				9D47E8BA2FC6227A008EF975 /* CurrencyProviding.swift in Sources */,

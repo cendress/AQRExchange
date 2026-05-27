@@ -61,6 +61,8 @@ final class ExchangeCalculatorViewModel: ObservableObject {
                 
                 return (currencyCode, exchangeRate)
             })
+            
+            recalculateCurrentInput()
         } catch {
             errorMessage = error.localizedDescription
         }
@@ -105,13 +107,16 @@ final class ExchangeCalculatorViewModel: ObservableObject {
     
     func selectCurrency(_ currency: String) {
         selectedCurrency = currency
-        
+        recalculateCurrentInput()
+    }
+    
+    private func recalculateCurrentInput() {
         switch activeInput {
         case .usdc:
             foreignAmount = convertUSDCToForeign(usdcAmount)
         case .foreign:
             usdcAmount = convertForeignToUSDC(foreignAmount)
-        case nil:
+        case .none:
             break
         }
     }
@@ -129,7 +134,7 @@ final class ExchangeCalculatorViewModel: ObservableObject {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         formatter.usesGroupingSeparator = false
-        formatter.maximumFractionDigits = 2
+        formatter.maximumFractionDigits = 4
         formatter.minimumFractionDigits = 0
 
         return formatter.string(from: number) ?? ""

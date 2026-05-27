@@ -33,10 +33,10 @@ struct ExchangeCalculatorView: View {
 
                 currencyFieldsStack
 
-                if viewModel.isLoading {
-                    ProgressView()
-                        .frame(maxWidth: .infinity, alignment: .center)
-                }
+//                if viewModel.isLoading {
+//                    ProgressView()
+//                        .frame(maxWidth: .infinity, alignment: .center)
+//                }
 
                 if let errorMessage = viewModel.errorMessage {
                     Text(errorMessage)

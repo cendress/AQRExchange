@@ -8,6 +8,11 @@
 import Combine
 import SwiftUI
 
+enum ActiveInput {
+    case usdc
+    case foreign
+}
+
 @MainActor
 final class ExchangeCalculatorViewModel: ObservableObject {
     @Published var availableCurrencies: [String] = []
@@ -22,6 +27,8 @@ final class ExchangeCalculatorViewModel: ObservableObject {
     @Published var isUSDcOnTop: Bool = true
     
     private var exchangeRatesByCurrency: [String: ExchangeRate] = [:]
+    
+    private var activeInput: ActiveInput?
     
     private let exchangeRateProvider: ExchangeRateProviding
     private let currencyProvider: CurrencyProviding
@@ -59,5 +66,72 @@ final class ExchangeCalculatorViewModel: ObservableObject {
         }
         
         isLoading = false
+    }
+    
+    //MARK: - Update values
+    
+    func updateUSDCAmount(_ value: String) {
+        activeInput = .usdc
+        usdcAmount = value
+        foreignAmount = convertForeignToUSDC(value)
+    }
+    
+    func updateForeignAmount(_ value: String) {
+        activeInput = .foreign
+        foreignAmount = value
+        usdcAmount = convertForeignToUSDC(value)
+    }
+    
+    private func convertUSDCToForeign(_ value: String) -> String {
+        guard let usdcDecimal = Decimal(string: value),
+              let rate = selectedExchangeRate?.askDecimal else {
+            return ""
+        }
+
+        let convertedAmount = usdcDecimal * rate
+        return format(convertedAmount)
+    }
+
+    private func convertForeignToUSDC(_ value: String) -> String {
+        guard let foreignDecimal = Decimal(string: value),
+              let rate = selectedExchangeRate?.askDecimal,
+              rate != 0 else {
+            return ""
+        }
+
+        let convertedAmount = foreignDecimal / rate
+        return format(convertedAmount)
+    }
+    
+    func selectCurrency(_ currency: String) {
+        selectedCurrency = currency
+        
+        switch activeInput {
+        case .usdc:
+            foreignAmount = convertUSDCToForeign(usdcAmount)
+        case .foreign:
+            usdcAmount = convertForeignToUSDC(foreignAmount)
+        case nil:
+            break
+        }
+    }
+    
+    func swapCurrencies() {
+        isUSDcOnTop.toggle()
+    }
+    
+    //MARK: - Helpers
+    
+    // Converts decimals to strings to display in usdc/foreign fields
+    private func format(_ value: Decimal) -> String {
+        let number = NSDecimalNumber(decimal: value)
+
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.usesGroupingSeparator = false
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 0
+
+        return formatter.string(from: number) ?? ""
     }
 }
